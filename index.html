@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオサイト</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .contact-form button {
+      background-color: #222;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .contact-form button:hover {
+      background-color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #222;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>デザインポートフォリオ</h1>
+  <p>Photoshop画像・YouTubeサムネ制作などを承ります</p>
+</header>
+
+<nav>
+  <a href="#works">作品</a>
+  <a href="#services">サービス</a>
+  <a href="#contact">お問い合わせ</a>
+</nav>
+
+<section id="works">
+  <h2>作品集</h2>
+  <div class="gallery">
+    <img src="sample1.jpg" alt="作品1">
+    <img src="sample2.jpg" alt="作品2">
+    <img src="sample3.jpg" alt="作品3">
+  </div>
+</section>
+
+<section id="services">
+  <h2>サービス内容</h2>
+  <ul>
+    <li>Photoshop画像作成</li>
+    <li>YouTubeサムネイル制作</li>
+    <li>ランディングページデザイン</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>お問い合わせ</h2>
+  <form class="contact-form" action="mailto:youremail@example.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="お名前" required>
+    <input type="email" name="email" placeholder="メールアドレス" required>
+    <textarea name="message" rows="5" placeholder="お問い合わせ内容" required></textarea>
+    <button type="submit">送信</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 デザインポートフォリオ
+</footer>
+
+</body>
+</html>
