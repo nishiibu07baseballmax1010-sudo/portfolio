@@ -3,132 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ポートフォリオサイト</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f8f8f8;
-      color: #333;
-    }
-    header {
-      background-color: #222;
-      color: #fff;
-      padding: 50px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 2.5em;
-    }
-    header p {
-      font-size: 1.2em;
-    }
-    nav {
-      text-align: center;
-      margin: 20px 0;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #222;
-      font-weight: bold;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-    .contact-form button {
-      background-color: #222;
-      color: #fff;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-    }
-    .contact-form button:hover {
-      background-color: #555;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      background-color: #222;
-      color: #fff;
-    }
-
-    .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-  </style>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- Micromodal CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/micromodal/dist/micromodal.min.css">
 </head>
 <body>
 
 <header>
-  <h1>デザインポートフォリオ</h1>
-  <p>Photoshop画像・YouTubeサムネ制作などを承ります</p>
+  <a href="index.html" class="logo-link">
+    <img src="images/ロゴ/ESロゴ.jpg" alt="ロゴ" class="logo-img">
+    <span class="logo-text"></span>
+  </a>
+
+  <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+   <span class="hamburger"></span>
+  </button>
+
+   <nav class="nav-menu">
+    <a href="#works">Works</a>
+    <a href="photoshop.html">Photoshop制作</a>
+    <a href="youtube.html">YouTubeサムネ</a>
+    <a href="landing.html">ランディングページ</a>
+    <a href="banners.html">バナー制作</a>
+    <a href="about.html">自己紹介</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="#works">作品</a>
-  <a href="#services">サービス</a>
-  <a href="#contact">お問い合わせ</a>
-</nav>
 
-<section id="works">
-  <h2 class="fade-in">作品集</h2>
-  <div class="gallery">
-    <img src="sample1.jpg" alt="作品1" class="fade-in">
-    <img src="sample2.jpg" alt="作品2" class="fade-in">
-    <img src="sample3.jpg" alt="作品3" class="fade-in">
+
+<!-- スライダー -->
+<div class="swiper hero-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="background-image:url('images/LP/美容/美容（LP）正方形切り抜き.jpg')">
+      <div class="overlay">
+        <h1>landing</h1>
+        <a href="landing.html" class="btn">View Works</a>
+      </div>
+    </div>
+    <div class="swiper-slide" style="background-image:url('images/SNS広告/セミナー広告.jpg')">
+      <div class="overlay">
+        <h1>SNS advertisement</h1>
+        <a href="sns.html" class="btn">View Works</a>
+      </div>
+    </div>
+    <div class="swiper-slide" style="background-image:url('images/サムネイル/転職系チャンネルを想定（サムネイル）.jpg')">
+      <div class="overlay">
+        <h1>YouTube Thumbnail</h1>
+        <a href="youtube.html" class="btn">View Works</a>
+      </div>
+    </div>
+     <div class="swiper-slide" style="background-image:url('images/バナー/ドリンクバナー.jpg')">
+      <div class="overlay">
+        <h1>banners</h1>
+        <a href="banners.html" class="btn">View Works</a>
+      </div>
+    </div>
+  </div>
+   <div class="swiper-pagination"></div>
+   <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<!-- 自己紹介 -->
+<section id="business-overview">
+  <h2>事業概要</h2>
+  <p class="business-text">
+    私たちは、Webデザイン・グラフィック制作を中心に、<br>クライアントのブランド価値を高めるデザインソリューションを提供しています。<br>Photoshopを活用したクリエイティブ制作から、<br>YouTubeサムネイルやLPデザインなど、ニーズに応じた柔軟な対応を行います。
+  </p>
+</section>
+
+<!-- 自己紹介 -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <img src="images/sample1.JPG" alt="プロフィール画像" class="about-image">
+    <div class="about-text">
+      <p>こんにちは！私はWebデザイナー/クリエイターとして活動しています。PhotoshopやIllustratorを使ったビジュアルデザインから、LPやバナー制作、YouTubeサムネイルの作成まで幅広く対応可能です。</p>
+      <p>お客様の課題に寄り添い、魅力的なデザインを提供することをモットーにしています。</p>
+      <p>デザインやお仕事のご相談は、お気軽にお問い合わせください。</p>
+    </div>
   </div>
 </section>
 
-<section id="services">
-  <h2>サービス内容</h2>
-  <ul>
-    <li>Photoshop画像作成</li>
-    <li>YouTubeサムネイル制作</li>
-    <li>ランディングページデザイン</li>
-  </ul>
+<!-- 作品集 -->
+<section id="works">
+  <h2>Works</h2>
+  <div class="gallery">
+    <a href="landing.html" class="card-link">
+    <div class="card" data-micromodal-trigger="modal-1">
+      <img src="images/LP/ドリップコーヒー/コーヒー（LP）正方形.jpg" alt="作品1">
+      <div class="card-info">
+        <h3>作品1</h3>
+        <p>landing</p>
+      </div>
+    </div>
+  </a>
+    <a href="youtube.html" class="card-link">
+    <div class="card" data-micromodal-trigger="modal-2">
+      <img src="images/SNS広告/SNS広告.jpg" alt="作品2">
+      <div class="card-info">
+        <h3>作品2</h3>
+        <p>YouTube Thumbnails</p>
+      </div>
+    </div>
+  </a>
+    <a href="landing.html" class="card-link">
+    <div class="card" data-micromodal-trigger="modal-3">
+      <img src="images/サムネイル/転職系チャンネルを想定（サムネイル）.jpg" alt="作品3">
+      <div class="card-info">
+        <h3>作品3</h3>
+        <p>Landing Pages</p>
+      </div>
+    </div>
+  </a>
+    <a href="banners.html" class="card-link">
+    <div class="card" data-micromodal-trigger="modal-4">
+      <img src="images/バナー/ハンバーガー（バナー）.jpg" alt="作品4">
+      <div class="card-info">
+        <h3>作品4</h3>
+        <p>Banners</p>
+      </div>
+    </div>
+  </a>
+</div>
 </section>
 
+<!-- サービス -->
+<section id="services">
+  <h2>Services</h2>
+  <div class="services-grid">
+    <div class="service">
+      <h3>Photoshop制作</h3>
+      <p>高品質な画像制作、加工、編集</p>
+      <a href="photoshop.html" class="btn">詳しく見る</a>
+    </div>
+    <div class="service">
+      <h3>YouTubeサムネ</h3>
+      <p>再生されやすいサムネイルデザイン</p>
+      <a href="youtube.html" class="btn">詳しく見る</a>
+    </div>
+    <div class="service">
+      <h3>ランディングページ</h3>
+      <p>企業向けの集客・販促ページ制作</p>
+      <a href="landing.html" class="btn">詳しく見る</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- お問い合わせ -->
 <section id="contact">
-  <h2>お問い合わせ</h2>
-  <form class="contact-form" action="mailto:youremail@example.com" method="post" enctype="text/plain">
+  <h2>Contact</h2>
+  <form class="contact-form">
     <input type="text" name="name" placeholder="お名前" required>
     <input type="email" name="email" placeholder="メールアドレス" required>
     <textarea name="message" rows="5" placeholder="お問い合わせ内容" required></textarea>
@@ -137,20 +168,31 @@
 </section>
 
 <footer>
-  &copy; 2025 デザインポートフォリオ
+  &copy; 2025 My Portfolio. All Rights Reserved.
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="js/main.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-document.addEventListener("scroll", () => {
-  const elements = document.querySelectorAll(".fade-in");
-  elements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      el.classList.add("show");
-    }
-  });
-});
-</script>
+  (function(){
+    emailjs.init("1zpclHT66iMveOrmj"); // EmailJSのユーザーID
+  })();
 
+  const form = document.querySelector('.contact-form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault(); // ページリロード防止
+
+    emailjs.sendForm('service_lc4dunt', 'template_oav478a', this)
+      .then(function(){
+        alert('送信完了しました！');
+        form.reset(); // フォームリセット
+      }, function(err){
+        alert('送信失敗: ' + JSON.stringify(err));
+      });
+  });
+</script>
 </body>
 </html>
